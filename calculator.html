@@ -1,0 +1,82 @@
+<html>
+<head>
+<title> Calculator </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<style>
+.btn{padding-left:50px;padding-right:50px;background-color:#969ef1;width:100%}
+.bg{background-color:black;color:white}
+.txt{color:white}
+</style>
+
+<script>
+function performCalculation(n){
+var a = parseInt(document.getElementById("calc").value);
+var b = parseInt(document.getElementById("calc1").value);
+var temp=n;
+if (temp==1){
+	var sum=a+b;
+	}
+else if (temp==2){
+	var sum=a-b;
+	}
+else if (temp==3){
+	var sum=a*b;
+	}
+else if(temp==4){
+	var sum=a/b;
+	}
+document.getElementById('answer').value=sum;
+
+
+}
+</script>
+
+<body class="bg">
+<br><br>
+<center>
+
+<form method="GET">
+<div class="row">
+
+<div class="col-md-2">
+<input type="number" id="calc"/> 
+</div>
+
+<div class="col-md-2">
+<input id="calc1"/>
+</div>
+<br>
+<div class="col-md-3">Answer =
+<input id="answer" type="text" name="answer">
+
+</form>
+</div>
+</div>
+ 
+<div class="row">
+
+<div class="col-md-2">
+<button class="btn" onclick="performCalculation(1)"> + </button>
+</div>
+
+<div class="col-md-2">
+<button class="btn" onclick="performCalculation(2)"> - </button>
+</div>
+
+<div class="col-md-2">
+<button class="btn" onclick="performCalculation(3)"> / </button>
+</div>
+
+<div class="col-md-2">
+<button class="btn" onclick="performCalculation(4)"> * </button>
+</div>
+
+
+ </div>
+</div>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<html>
+<head>
+<title> Calculator </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+<style>
+.bg{background-color:#000000;}
+.pd{margin:200px}
+.in{background:#202225;width:100%;height: 80px;  margin-left: 12;color:white;    margin-bottom: 10}
+.bg2{background-color:#f1dff9}
+.btn{padding-left:50px;padding-right:50px;border;background-color:#f1dff9;width:278px; margin: 2;    height: 80px;}
+.c1{background-color:red}
+.c2{background-color:#ffc107}
+.c3{background-color:#8989ef}
+.c4{background-color:#c792df}
+
+
+</style>
+<script>
+
+function dis(val)
+{
+document.getElementById("ans").value+=val;
+}
+
+function solve()
+{
+var x = document.getElementById("ans").value;
+var y = eval(x);
+document.getElementById("ans").value = "";
+document.getElementById('ans').value = y;
+}
+
+function clr()
+{
+document.getElementById("ans").value = "";
+}
+
+</script>
+
+
+<body class='bg'>
+
+<center>
+<div class="row pd">
+<div class="col-md-12">
+<input type="text" id="ans" class="in" disabled />
+
+<div class="row bg1">
+
+<div class="col-md-3">
+<button class="btn c2" > % </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn c2" id="clr" value="ce" onclick="clr()"> CE </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn c1" value="c" onclick="clr()" > C </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn c3" value="/" onclick="dis('/')" > / </button>
+</div>
+
+</div>
+
+
+
+<div class="row bg1">
+
+<div class="col-md-3">
+<button class="btn" value="7" onclick="dis('7')" > 7 </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn" value="8" onclick="dis('8')"> 8 </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn" value="9" onclick="dis('9')"> 9 </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn c3" value="*" onclick="dis('*')"> * </button>
+</div>
+
+</div>
+
+
+<div class="row bg1">
+
+<div class="col-md-3">
+<button class="btn" value="4" onclick="dis('4')" > 4 </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn" value="5" onclick="dis('5')"> 5 </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn" value="6" onclick="dis('6')" > 6 </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn c3" value="-" onclick="dis('-')" > - </button>
+</div>
+</div>
+
+
+
+<div class="row bg1">
+
+<div class="col-md-3">
+<button class="btn" value="1" onclick="dis('1')"> 1 </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn"value="2" onclick="dis('3')" > 2 </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn" value="3" onclick="dis('3')" > 3 </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn c3" value="+" onclick="dis('+')" > + </button>
+</div>
+</div>
+
+
+
+
+<div class="row bg1">
+
+<div class="col-md-3">
+<button class="btn c2" > +/- </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn c2" value="." onclick="dis('.')"> . </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn " value="0" onclick="dis('0')" > 0 </button>
+</div>
+
+<div class="col-md-3">
+<button class="btn c4"  onclick="solve()" > = </button>
+</div>
+
+</div>
+
+
+</div>
+</div>
+</center>
+</body>
+</html>
